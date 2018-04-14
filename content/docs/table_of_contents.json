@@ -1,0 +1,34 @@
+{
+  "id": "table-of-contents",
+  "possibleProp": "possibleVal",
+  "chapters": {
+    "Docs": {
+      "Install": [
+        {
+          "post": "./install.md"
+        },
+        {
+          "post": "./npm.md"
+        }
+      ],
+      "Usage": [
+        {
+          "post": "./advanced.md"
+        },
+        {
+          "post": "./basic.md"
+        }
+      ],
+      "API": [
+        {
+          "post": "./api.md"
+        }
+      ],
+      "Contributing": [
+        {
+          "post": "./contribute.md"
+        }
+      ]
+    }
+  }
+}
