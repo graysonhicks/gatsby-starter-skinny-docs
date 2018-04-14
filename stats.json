@@ -33,8 +33,8 @@
       "path---without-npm-fe1e4ca9db91d60c09ce.js.map"
     ],
     "path---index": [
-      "path---index-4c96868ae13c29dca16c.js",
-      "path---index-4c96868ae13c29dca16c.js.map"
+      "path---index-ce791ae96d5801620e2e.js",
+      "path---index-ce791ae96d5801620e2e.js.map"
     ],
     "commons": [
       "commons-1f6cade73efba712a4cc.js",
@@ -63,9 +63,9 @@
       "path---demo-a0e39f21c11f6a62c5ab.js.map"
     ],
     "app": [
-      "app-a05c55a8940059a63b54.js",
+      "app-aa811208130eac31b0ab.js",
       "build-js-styles.css",
-      "app-a05c55a8940059a63b54.js.map",
+      "app-aa811208130eac31b0ab.js.map",
       "build-js-styles.css.map"
     ],
     "path---basic-usage": [
