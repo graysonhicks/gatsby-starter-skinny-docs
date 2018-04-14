@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/gatsby-starter-skinny-docs/app-a05c55a8940059a63b54.js","440f3017afc6bdd22798423158e00a0b"],["/gatsby-starter-skinny-docs/commons-1f6cade73efba712a4cc.js","f512fa5696d15dcb573383caeb78c4c6"],["/gatsby-starter-skinny-docs/index.html","f203574ef700a77d65398c5f97025ee6"],["/gatsby-starter-skinny-docs/manifest.json","5b1b0c325aee0ae9d47b285c994ad7f4"],["/gatsby-starter-skinny-docs/offline-plugin-app-shell-fallback/index.html","3993cdb5b4a5c74f64507b8c18b78b74"]];
+var precacheConfig = [["/gatsby-starter-skinny-docs/app-a05c55a8940059a63b54.js","ac2468e9323315ee6c205375e308d505"],["/gatsby-starter-skinny-docs/commons-1f6cade73efba712a4cc.js","bceade31986c9b2a72eeb0aee0a04f9a"],["/gatsby-starter-skinny-docs/index.html","ccd7672c04b794854b1f22cbe3ad9699"],["/gatsby-starter-skinny-docs/manifest.json","5b1b0c325aee0ae9d47b285c994ad7f4"],["/gatsby-starter-skinny-docs/offline-plugin-app-shell-fallback/index.html","2215563c935cae6d16ed5c36df9dcd9e"]];
 var cacheName = 'sw-precache-v3-gatsby-plugin-offline-' + (self.registration ? self.registration.scope : '');
 
 
