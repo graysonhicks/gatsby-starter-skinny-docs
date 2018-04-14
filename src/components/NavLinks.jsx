@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { FaGithub } from 'react-icons/lib/fa';
 import styled from 'styled-components';
 
+// react-icons is available for links to any social platform icon available there.  Only using FaGithub here.
+
 class NavLinks extends Component {
   render() {
     return (

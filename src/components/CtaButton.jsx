@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
 
 class ctaButton extends Component {
   render() {
     const { children } = this.props;
     return (
-      <Link style={{ border: "none" }} to={this.props.to}>
-        <ButtonContainer>
-          {children}
-        </ButtonContainer>
+      <Link style={{ border: 'none' }} to={this.props.to}>
+        <ButtonContainer>{children}</ButtonContainer>
       </Link>
     );
   }
 }
 
 export default ctaButton;
+
+// Styled assuming two buttons on front.  Changes necessary if not two buttons.
 
 const ButtonContainer = styled.div`
   border: 1px solid ${props => props.theme.brand};

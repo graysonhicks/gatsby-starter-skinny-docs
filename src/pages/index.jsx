@@ -9,6 +9,11 @@ import config from '../../data/SiteConfig';
 import Navigation from '../components/Layout/Navigation';
 import Body from '../components/Layout/Body';
 
+// Home page component
+// Queries all markdown docs
+// Also gets logo and background image
+// Background image query and component can be removed and a solid color set where now transparent in the hero and navigation
+
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
@@ -22,10 +27,21 @@ class Index extends React.Component {
             <Navigation />
             <Hero>
               <Img
-                resolutions={this.props.data.file.childImageSharp.resolutions}
+                resolutions={this.props.data.logo.childImageSharp.resolutions}
               />
               <h1>{config.siteTitle}</h1>
               <h4>{config.siteDescription}</h4>
+              <Img
+                sizes={this.props.data.bg.childImageSharp.sizes}
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: 0,
+                  width: '100%',
+                  height: '100%',
+                  zIndex: -1,
+                }}
+              />
             </Hero>
           </IndexHeadContainer>
           <Body />
@@ -38,9 +54,10 @@ class Index extends React.Component {
 export default Index;
 
 const IndexHeadContainer = styled.div`
-  background: ${props => props.theme.brand};
+  background: transparent;
   padding: ${props => props.theme.sitePadding};
   text-align: center;
+  position: relative;
 `;
 
 const Hero = styled.div`
@@ -68,10 +85,18 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "logo.png" }) {
+    logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
         resolutions(width: 127, height: 127) {
           ...GatsbyImageSharpResolutions
+        }
+      }
+    }
+
+    bg: file(relativePath: { eq: "bg.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 3600) {
+          ...GatsbyImageSharpSizes_noBase64
         }
       }
     }
