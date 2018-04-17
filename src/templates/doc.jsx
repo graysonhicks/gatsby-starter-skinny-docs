@@ -5,7 +5,6 @@ import Link from 'gatsby-link';
 
 import SEO from '../components/SEO';
 import SiteHeader from '../components/Layout/Header';
-import config from '../../data/SiteConfig';
 import TableOfContents from '../components/Layout/TableOfContents';
 
 export default class DocTemplate extends React.Component {
@@ -17,9 +16,6 @@ export default class DocTemplate extends React.Component {
     const post = postNode.frontmatter;
     if (!post.id) {
       post.id = slug;
-    }
-    if (!post.id) {
-      post.category_id = config.postDefaultCategoryID;
     }
 
     return (

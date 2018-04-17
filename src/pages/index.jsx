@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 import SEO from '../components/SEO';
-import config from '../../data/SiteConfig';
 
 import Navigation from '../components/Layout/Navigation';
 import Body from '../components/Layout/Body';
@@ -24,7 +23,7 @@ class Index extends React.Component {
 
     return (
       <div className="index-container">
-        <Helmet title={config.siteTitle} />
+        <Helmet title={siteTitle} />
         <SEO postEdges={postEdges} siteMetadata={siteMetadata} />
         <main>
           <IndexHeadContainer>
