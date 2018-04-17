@@ -1,12 +1,20 @@
-const config = require('./data/SiteConfig');
-
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
-
+const config = {
+  pathPrefix: '/gatsby-starter-skinny-docs',
+  siteUrl: 'https://github.com/graysonhicks', // w/o pathPrefix
+  siteFullUrl: this.pathPrefix + this.siteUrl,
+  siteLogo: '/logos/logo.png', // Logo used for SEO and manifest.
+  siteTitle: 'your-sweet-lib', // Site title.
+  siteTitleAlt: 'A Skinny Gatsby Starter Template for Creating Docs', // Alternative site title for SEO.
+  siteDescription: 'Get your docs up and going with Gatsby.', // Website description used for RSS feeds/meta description tag.
+  docsDir: 'docs', // The name of the directory that contains lessons or docs.
+  siteFBAppID: 'optional facebook app id for open graph in SEO.jsx',
+  backgroundColor: '#e0e0e0', // Used for setting manifest background color.
+  theme_color: '#0074AB',
+  siteTwitterId: '@graysonhicks',
+};
 module.exports = {
   pathPrefix: config.pathPrefix,
-  siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
-  },
+  siteMetadata: config,
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -54,7 +62,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: config.themeColor,
+        color: config.theme_color,
       },
     },
     'gatsby-plugin-catch-links',
@@ -65,19 +73,19 @@ module.exports = {
       options: {
         name: config.siteTitle,
         short_name: config.siteTitle,
-        description: config.siteDescription,
+        description: config.description,
         start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        background_color: config.background_color,
+        theme_color: config.theme_color,
         display: 'minimal-ui',
         icons: [
           {
-            src: '/logos/logo.png',
+            src: config.siteLogo,
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/logos/logo.png',
+            src: config.siteLogo,
             sizes: '512x512',
             type: 'image/png',
           },

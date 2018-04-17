@@ -17,22 +17,24 @@ import Body from '../components/Layout/Body';
 class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
+    const siteMetadata = this.props.data.site.siteMetadata;
+    const { siteTitle, siteDescription } = siteMetadata;
+    const { resolutions } = this.props.data.logo.childImageSharp;
+    const { sizes } = this.props.data.bg.childImageSharp;
 
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
+        <SEO postEdges={postEdges} siteMetadata={siteMetadata} />
         <main>
           <IndexHeadContainer>
             <Navigation />
             <Hero>
+              <Img resolutions={resolutions} />
+              <h1>{siteTitle}</h1>
+              <h4>{siteDescription}</h4>
               <Img
-                resolutions={this.props.data.logo.childImageSharp.resolutions}
-              />
-              <h1>{config.siteTitle}</h1>
-              <h4>{config.siteDescription}</h4>
-              <Img
-                sizes={this.props.data.bg.childImageSharp.sizes}
+                sizes={sizes}
                 style={{
                   position: 'absolute',
                   left: 0,
@@ -71,6 +73,17 @@ const Hero = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        siteTitle
+        siteTitleAlt
+        siteDescription
+        siteFullUrl
+        siteLogo
+        siteFBAppID
+        siteTwitterId
+      }
+    }
     allMarkdownRemark(limit: 2000) {
       edges {
         node {

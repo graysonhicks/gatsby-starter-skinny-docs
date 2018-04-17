@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 import SEO from '../components/SEO';
-import config from '../../data/SiteConfig';
 import MainHeader from '../components/Layout/Header';
 import Demo from '../components/Demo/Demo';
 
@@ -13,14 +12,20 @@ const BodyContainer = styled.div`
 
 class AboutPage extends React.Component {
   render() {
+    const {
+      siteTitle,
+      siteDescription,
+      siteLogo,
+    } = this.props.data.site.siteMetadata;
+
     return (
       <div className="index-container">
         <main>
           <MainHeader
-            siteTitle={config.siteTitle}
-            siteDescription={config.siteDescription}
+            siteTitle={siteTitle}
+            siteDescription={siteDescription}
             location={this.props.location}
-            logo={config.siteLogo}
+            logo={siteLogo}
           />
           <BodyContainer>
             <Demo />
@@ -32,3 +37,15 @@ class AboutPage extends React.Component {
 }
 
 export default AboutPage;
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        siteTitle
+        siteDescription
+        siteLogo
+      }
+    }
+  }
+`;

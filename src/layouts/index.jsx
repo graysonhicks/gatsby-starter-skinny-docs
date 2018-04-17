@@ -1,17 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
-import config from '../../data/SiteConfig';
 import './css/index.css';
 import './css/code.css';
 import theme from './theme';
 
 class MainLayout extends React.Component {
-  getLocalTitle() {
+  getLocalTitle(pathPrefix) {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
-    const pathPrefix = config.pathPrefix ? config.pathPrefix : '/';
     const currentPath = this.props.location.pathname
       .replace(pathPrefix, '')
       .replace('/', '');
@@ -28,11 +26,14 @@ class MainLayout extends React.Component {
 
   render() {
     const { children } = this.props;
+    const { siteMetadata } = this.props.data.site;
+    const { pathPrefix, siteDescription, siteTitle } = siteMetadata;
+
     return (
       <div>
         <Helmet>
-          <title>{`${this.getLocalTitle()} | ${config.siteTitle}`}</title>
-          <meta name="description" content={config.siteDescription} />
+          <title>{`${this.getLocalTitle(pathPrefix)} | ${siteTitle}`}</title>
+          <meta name="description" content={siteDescription} />
         </Helmet>
         <ThemeProvider theme={theme}>{children()}</ThemeProvider>
       </div>
@@ -41,3 +42,19 @@ class MainLayout extends React.Component {
 }
 
 export default MainLayout;
+
+export const MainLayoutQuery = graphql`
+  query MainLayoutQuery {
+    site {
+      siteMetadata {
+        siteTitle
+        siteTitleAlt
+        siteDescription
+        siteFullUrl
+        siteLogo
+        siteFBAppID
+        siteTwitterId
+      }
+    }
+  }
+`;

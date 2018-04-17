@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import config from '../../data/SiteConfig';
-
-// Uses react-helmet to generate meta tags.  Can be customized heavily.  Relies on the SiteConfig file.
 
 class SEO extends Component {
   render() {
     const { postNode, postPath, postSEO } = this.props;
+    const {
+      siteTitle,
+      siteTitleAlt,
+      siteDescription,
+      siteFullUrl,
+      siteLogo,
+      siteFBAppID,
+      siteTwitterId,
+    } = this.props.siteMetadata;
+
     let title;
     let description;
     let image;
@@ -18,22 +25,20 @@ class SEO extends Component {
         ? postMeta.description
         : postNode.excerpt;
       image = postMeta.cover;
-      postURL = config.siteUrl + config.pathPrefix + postPath;
+      postURL = siteFullUrl + postPath;
     } else {
-      title = config.siteTitle;
-      description = config.siteDescription;
-      image = config.siteLogo;
+      title = siteTitle;
+      description = siteDescription;
+      image = siteLogo;
     }
-    const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
-    image = config.siteUrl + realPrefix + image;
-    const blogURL = config.siteUrl + config.pathPrefix;
+
     const schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
         '@type': 'WebSite',
-        url: blogURL,
+        url: siteFullUrl,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        alternateName: siteTitleAlt,
       },
     ];
     if (postSEO) {
@@ -56,9 +61,9 @@ class SEO extends Component {
         {
           '@context': 'http://schema.org',
           '@type': 'BlogPosting',
-          url: blogURL,
+          url: siteFullUrl,
           name: title,
-          alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+          alternateName: siteTitleAlt,
           headline: title,
           image: {
             '@type': 'ImageObject',
@@ -80,22 +85,16 @@ class SEO extends Component {
         </script>
 
         {/* OpenGraph tags */}
-        <meta property="og:url" content={postSEO ? postURL : blogURL} />
+        <meta property="og:url" content={postSEO ? postURL : siteFullUrl} />
         {postSEO ? <meta property="og:type" content="article" /> : null}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
-        <meta
-          property="fb:app_id"
-          content={config.siteFBAppID ? config.siteFBAppID : ''}
-        />
+        <meta property="fb:app_id" content={siteFBAppID} />
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:creator"
-          content={config.userTwitter ? config.userTwitter : ''}
-        />
+        <meta name="twitter:creator" content={siteTwitterId} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />

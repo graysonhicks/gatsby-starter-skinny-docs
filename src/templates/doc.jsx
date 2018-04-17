@@ -11,6 +11,8 @@ import TableOfContents from '../components/Layout/TableOfContents';
 export default class DocTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
+    const siteMetadata = this.props.data.site.siteMetadata;
+    const { siteTitle } = siteMetadata;
     const postNode = this.props.data.postBySlug;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -23,9 +25,14 @@ export default class DocTemplate extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
+          <title>{`${post.title} | ${siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
+        <SEO
+          postPath={slug}
+          postNode={postNode}
+          postSEO
+          siteMetadata={siteMetadata}
+        />
         <BodyGrid>
           <HeaderContainer>
             <SiteHeader location={this.props.location} />
@@ -102,6 +109,17 @@ const ToCContainer = styled.div`
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query DocsBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        siteTitle
+        siteTitleAlt
+        siteDescription
+        siteFullUrl
+        siteLogo
+        siteFBAppID
+        siteTwitterId
+      }
+    }
     postBySlug: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
