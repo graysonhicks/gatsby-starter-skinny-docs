@@ -1,0 +1,2 @@
+webpackJsonp([0xc4f3d3a9af3e],{1014:function(t,e){t.exports={data:{site:{siteMetadata:{siteTitle:"your-sweet-lib",siteDescription:"Get your docs up and going with Gatsby.",siteLogo:"/logos/logo.png"}}},pathContext:{}}}});
+//# sourceMappingURL=path---demo-faec5420791bb9bc8a57.js.map
