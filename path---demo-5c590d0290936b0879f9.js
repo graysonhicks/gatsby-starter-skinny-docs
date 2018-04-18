@@ -1,0 +1,2 @@
+webpackJsonp([0xc4f3d3a9af3e],{948:function(t,s){t.exports={data:{site:{siteMetadata:{siteTitle:"gatsby-starter-skinny-docs",siteDescription:"Get your docs site up and going with Gatsby.",siteLogo:"/logos/logo.png"}}},pathContext:{}}}});
+//# sourceMappingURL=path---demo-5c590d0290936b0879f9.js.map

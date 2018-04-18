@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{783:function(t,e){t.exports={data:{site:{siteMetadata:{siteTitle:"your-sweet-lib",siteTitleAlt:"A Skinny Gatsby Starter Template for Creating Docs",siteDescription:"Get your docs up and going with Gatsby.",siteFullUrl:null,siteLogo:"/logos/logo.png",siteFBAppID:"optional facebook app id for open graph in SEO.jsx",siteTwitterId:"@graysonhicks"}}},layoutContext:{}}}});
-//# sourceMappingURL=path----fc17ae1b939eb0f8ad9f.js.map
