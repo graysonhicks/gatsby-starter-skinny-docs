@@ -32,8 +32,8 @@ class Index extends React.Component {
             <Navigation />
             <Hero>
               <Img resolutions={resolutions} />
-              <h1>{siteTitle}</h1>
-              <h4>{siteDescription}</h4>
+              <Title>{siteTitle}</Title>
+              <Description>{siteDescription}</Description>
               {/* Hero Background as Image <Img
                 sizes={sizes}
                 style={{
@@ -58,7 +58,7 @@ export default Index;
 
 const IndexHeadContainer = styled.div`
   /* Change this background to transparent if you want an image background for the hero */
-  background-color: #07194f;
+  background-color: ${props => props.theme.brand};
   padding: ${props => props.theme.sitePadding};
   text-align: center;
   position: relative;
@@ -67,11 +67,13 @@ const IndexHeadContainer = styled.div`
 const Hero = styled.div`
   color: white;
   padding: 50px 0;
-
-  & > h1 {
-    font-weight: 600;
-  }
 `;
+
+const Title = styled.h1`
+  font-weight: 600;
+`;
+
+const Description = styled.p``;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

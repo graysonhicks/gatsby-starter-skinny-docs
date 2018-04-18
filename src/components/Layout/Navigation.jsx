@@ -3,6 +3,33 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import NavLinks from '../NavLinks';
 
+class Navigation extends React.Component {
+  render() {
+    return (
+      <NavContainer>
+        <section>
+          <Link className="nav-link" to="/">
+            {' '}
+            HOME{' '}
+          </Link>
+          <Link className="nav-link" to="/install">
+            {' '}
+            DOCS{' '}
+          </Link>
+          <Link className="nav-link" to="/demo">
+            {' '}
+            DEMO{' '}
+          </Link>
+
+          <NavLinks />
+        </section>
+      </NavContainer>
+    );
+  }
+}
+
+export default Navigation;
+
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -35,30 +62,3 @@ const NavContainer = styled.div`
     }
   }
 `;
-
-class Navigation extends React.Component {
-  render() {
-    return (
-      <NavContainer>
-        <section>
-          <Link className="nav-link" to="/">
-            {' '}
-            HOME{' '}
-          </Link>
-          <Link className="nav-link" to="/install">
-            {' '}
-            DOCS{' '}
-          </Link>
-          <Link className="nav-link" to="/demo">
-            {' '}
-            DEMO{' '}
-          </Link>
-
-          <NavLinks />
-        </section>
-      </NavContainer>
-    );
-  }
-}
-
-export default Navigation;

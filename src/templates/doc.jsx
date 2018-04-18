@@ -1,7 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
 
 import SEO from '../components/SEO';
 import SiteHeader from '../components/Layout/Header';
@@ -9,8 +8,6 @@ import TableOfContents from '../components/Layout/TableOfContents';
 
 export default class DocTemplate extends React.Component {
   render() {
-    console.log(this.props);
-
     const { slug } = this.props.pathContext;
     const siteMetadata = this.props.data.site.siteMetadata;
     const { siteTitle } = siteMetadata;
@@ -39,10 +36,10 @@ export default class DocTemplate extends React.Component {
             <TableOfContents posts={this.props.data.tableOfContents} />
           </ToCContainer>
           <BodyContainer>
-            <div>
-              <h1>{post.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            </div>
+            <DocContainer>
+              <Title>{post.title}</Title>
+              <Doc dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            </DocContainer>
           </BodyContainer>
         </BodyGrid>
       </div>
@@ -70,13 +67,9 @@ const BodyContainer = styled.div`
   justify-self: center;
   width: 100%;
   padding: ${props => props.theme.sitePadding};
+
   @media screen and (max-width: 600px) {
     order: 2;
-  }
-
-  & > div {
-    max-width: ${props => props.theme.contentWidthLaptop};
-    margin: auto;
   }
 
   & > h1 {
@@ -103,6 +96,15 @@ const ToCContainer = styled.div`
     overflow: inherit;
   }
 `;
+
+const DocContainer = styled.div`
+  max-width: ${props => props.theme.contentWidthLaptop};
+  margin: auto;
+`;
+
+const Title = styled.h1``;
+
+const Doc = styled.div``;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

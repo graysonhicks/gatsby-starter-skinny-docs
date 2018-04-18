@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 import CtaButton from '../CtaButton';
 
-const Container = styled.div`
-  padding: ${props => props.theme.sitePadding};
-`;
-
 class Body extends React.Component {
   render() {
     return (

@@ -1,14 +1,8 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 
-import SEO from '../components/SEO';
 import MainHeader from '../components/Layout/Header';
 import Demo from '../components/Demo/Demo';
-
-const BodyContainer = styled.div`
-  padding: ${props => props.theme.sitePadding};
-`;
 
 class AboutPage extends React.Component {
   render() {
@@ -37,6 +31,10 @@ class AboutPage extends React.Component {
 }
 
 export default AboutPage;
+
+const BodyContainer = styled.div`
+  padding: ${props => props.theme.sitePadding};
+`;
 
 export const query = graphql`
   query LayoutQuery {

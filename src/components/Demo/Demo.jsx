@@ -69,7 +69,8 @@ class Demo extends Component {
         <h1>Demo</h1>
         <h4>
           Build a library or plugin demo page here with React components.
-          Everything inside here can be deleted/edited to your liking.
+          Everything inside here should be deleted/edited to your liking to
+          showcase your library in action.
         </h4>
         <DemoOptions>
           <OptionLabel htmlFor="custom-toggle" custom={1}>
