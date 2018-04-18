@@ -1,34 +1,60 @@
 {
   "id": "table-of-contents",
   "possibleProp": "possibleVal",
-  "chapters": {
-    "Docs": {
-      "Install": [
+  "chapters": [
+    {
+      "title": "Docs",
+      "subchapters": [
         {
-          "post": "./install.md"
+          "title": "Install",
+          "sections": [
+            {
+              "post": "./install.md"
+            },
+            {
+              "post": "./npm.md"
+            }
+          ]
         },
         {
-          "post": "./npm.md"
+          "title": "Usage",
+          "sections": [
+            {
+              "post": "./advanced.md"
+            },
+            {
+              "post": "./basic.md"
+            }
+          ]
         }
-      ],
-      "Usage": [
+      ]
+    },
+    {
+      "title": "API/Contributing",
+      "subchapters": [
         {
-          "post": "./advanced.md"
+          "title": "API",
+          "sections": [
+            {
+              "post": "./api.md"
+            },
+            {
+              "post": "./contribute.md"
+            }
+          ]
         },
         {
-          "post": "./basic.md"
-        }
-      ],
-      "API": [
-        {
-          "post": "./api.md"
-        }
-      ],
-      "Contributing": [
-        {
-          "post": "./contribute.md"
+          "title": "Contributing",
+          "sections": [
+            {
+              "post": "./api.md"
+            },
+            {
+              "post": "./contribute.md"
+            }
+          ]
         }
       ]
     }
-  }
+  ]
 }

@@ -9,6 +9,8 @@ import TableOfContents from '../components/Layout/TableOfContents';
 
 export default class DocTemplate extends React.Component {
   render() {
+    console.log(this.props);
+
     const { slug } = this.props.pathContext;
     const siteMetadata = this.props.data.site.siteMetadata;
     const { siteTitle } = siteMetadata;
@@ -102,7 +104,7 @@ const ToCContainer = styled.div`
   }
 `;
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query DocsBySlug($slug: String!) {
     site {
@@ -127,36 +129,11 @@ export const pageQuery = graphql`
     tableOfContents: docsJson {
       possibleProp
       chapters {
-        Docs {
-          Install {
+        title
+        subchapters {
+          title
+          sections {
             post {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-          Usage {
-            post {
-              id
-              childMarkdownRemark {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-          API {
-            post {
-              id
               childMarkdownRemark {
                 fields {
                   slug

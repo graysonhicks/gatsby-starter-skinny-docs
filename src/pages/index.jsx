@@ -18,7 +18,9 @@ class Index extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     const siteMetadata = this.props.data.site.siteMetadata;
     const { siteTitle, siteDescription } = siteMetadata;
+    // getting logo using sharp resolutions
     const { resolutions } = this.props.data.logo.childImageSharp;
+    // getting a hero background image using sharp sizes (not using, but this is how would get from query below)
     const { sizes } = this.props.data.bg.childImageSharp;
 
     return (
@@ -32,7 +34,7 @@ class Index extends React.Component {
               <Img resolutions={resolutions} />
               <h1>{siteTitle}</h1>
               <h4>{siteDescription}</h4>
-              <Img
+              {/* Hero Background as Image <Img
                 sizes={sizes}
                 style={{
                   position: 'absolute',
@@ -42,7 +44,7 @@ class Index extends React.Component {
                   height: '100%',
                   zIndex: -1,
                 }}
-              />
+              /> */}
             </Hero>
           </IndexHeadContainer>
           <Body />
@@ -55,7 +57,8 @@ class Index extends React.Component {
 export default Index;
 
 const IndexHeadContainer = styled.div`
-  background: transparent;
+  /* Change this background to transparent if you want an image background for the hero */
+  background-color: #07194f;
   padding: ${props => props.theme.sitePadding};
   text-align: center;
   position: relative;
@@ -64,12 +67,13 @@ const IndexHeadContainer = styled.div`
 const Hero = styled.div`
   color: white;
   padding: 50px 0;
+
   & > h1 {
     font-weight: 600;
   }
 `;
 
-/* eslint no-undef: "off"*/
+/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query IndexQuery {
     site {
