@@ -9,21 +9,27 @@
           "title": "Install",
           "sections": [
             {
-              "post": "./install.md"
+              "post": "./install/install.md"
             },
             {
-              "post": "./npm.md"
+              "post": "./install/get-started.md"
             }
           ]
         },
         {
-          "title": "Usage",
+          "title": "Main Components",
           "sections": [
             {
-              "post": "./advanced.md"
+              "post": "./main_components/home-page.md"
             },
             {
-              "post": "./basic.md"
+              "post": "./main_components/table-of-contents-json.md"
+            },
+            {
+              "post": "./main_components/table-of-contents.md"
+            },
+            {
+              "post": "./main_components/demo-page.md"
             }
           ]
         }
