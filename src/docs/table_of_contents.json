@@ -32,31 +32,18 @@
               "post": "./main_components/demo-page.md"
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "API/Contributing",
-      "subchapters": [
-        {
-          "title": "API",
-          "sections": [
-            {
-              "post": "./api.md"
-            },
-            {
-              "post": "./contribute.md"
-            }
-          ]
         },
         {
-          "title": "Contributing",
+          "title": "Gatsby Specific",
           "sections": [
             {
-              "post": "./api.md"
+              "post": "./plugins/plugins.md"
             },
             {
-              "post": "./contribute.md"
+              "post": "./plugins/source.md"
+            },
+            {
+              "post": "./plugins/transformers.md"
             }
           ]
         }

@@ -1,5 +1,5 @@
 ---
-title: "Table of Contents Component"
+title: "TableOfContents Component"
 ---
 
 The `<TableOfContents / >` React component is what receives the queried data from `table_of_contents.json` and loops over to build the nested left nav of Chapters, Subchapters, and Sections.

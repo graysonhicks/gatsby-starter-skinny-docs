@@ -60,12 +60,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        color: config.theme_color,
-      },
-    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-json',
