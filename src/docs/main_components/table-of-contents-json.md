@@ -2,12 +2,17 @@
 title: "table_of_contents.json"
 ---
 
-The [`table_of_contents.json`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/docs/table_of_contents.json) file is where you provide the structure for your documentation. It relies on Gatsby's [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) to parse Markdown files. It is queried in the [`templates/doc.jsx`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/templates/doc.jsx) page and passed the data into the [`<TableOfContents / >`](/table-of-contents-component) component.
-
+* [Intro](#intro)
 * [Parts](#parts)
 * [Entry Point to Gatsby](#entry)
 * [Querying](#querying)
 * [Example](#example)
+
+<a name="intro"/>
+
+### Intro
+
+The [`table_of_contents.json`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/docs/table_of_contents.json) file is where you provide the structure for your documentation. It relies on Gatsby's [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) to parse Markdown files. It is queried in the [`templates/doc.jsx`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/templates/doc.jsx) page and passed the data into the [`<TableOfContents / >`](/table-of-contents-component) component.
 
 <a name="parts"/>
 

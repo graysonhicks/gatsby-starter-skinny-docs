@@ -13,6 +13,9 @@
             },
             {
               "post": "./install/get-started.md"
+            },
+            {
+              "post": "./install/data-flow.md"
             }
           ]
         },
@@ -24,6 +27,9 @@
             },
             {
               "post": "./main_components/table-of-contents-json.md"
+            },
+            {
+              "post": "./main_components/gatsby-node.md"
             },
             {
               "post": "./main_components/table-of-contents.md"
