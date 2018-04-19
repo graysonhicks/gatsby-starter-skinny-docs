@@ -4,6 +4,44 @@
 
 A simplified starter just for documentation/demo sites built with [Gatsby](https://github.com/gatsbyjs/gatsby/).
 
+### Quick Start
+
+```
+gatsby new great-docs-site https://github.com/graysonhicks/gatsby-starter-skinny-docs
+```
+
+```
+cd greats-docs-site
+```
+
+```
+npm install && gatsby develop
+```
+
+##### Table of Contents
+
+* Install
+  * [Install](#install)
+  * [Get Started](#get-started)
+* Development
+  * [Development](#development)
+  * [Building](#building)
+  * [Deploying](#deploying)
+* How It Works
+  * [Basic Data Flow](#basic-data-flow)
+  * [table_of_contents.json](#table_of_contentsjson)
+  * [gatsby-node.js](#gatsby-nodejs)
+  * [TableOfContents Component](#tableofcontents-component)
+  * [Home Page](#home-page)
+  * [Demo Page](#demo-page)
+* Gatsby Specific
+  * [Plugins](#plugins)
+  * [Source](#source)
+  * [Transformers](#transformers)
+* Credits and Contributing
+  * [Credits](#credits)
+  * [Contributing](#contributing)
+
 ## [Demo](https://graysonhicks.github.io/gatsby-starter-skinny-docs/)
 
 ## Install
@@ -20,13 +58,21 @@ This command will clone the git repo. Now to get your site up and running.
 
 ### Get Started
 
-Now that you have cloned the repo, run this to start the Gatsby development server:
+Now that you have cloned the repo, install the dependencies and run this to start the Gatsby development server:
+
+```
+cd [YOUR-DIRECTORY]
+```
+
+```
+npm install
+```
 
 ```
 gatsby develop
 ```
 
-Head to http://localhost:8000/ to see the starter site. Next, we need to explore the main components of the site so you can customize it for your library.
+Head to http://localhost:8000/ to see the starter site. Start editing/deleting the starter Markdown files or styles to your liking. Next, we need to explore the basic development process of Gatsby.
 
 ## Development
 
@@ -365,6 +411,92 @@ The `Demo` page (`pages/demo.jsx`) is where you can build a page to showcase you
 
 It is not a Markdown file by default, but a full-fledged React page.
 
+## Gatsby Specific
+
+### Plugins
+
+List of Gatsby `plugins` used and links to their documentation. Other plugins can be added to the project as needed.
+
+#### [gatsby-plugin-react-helmet](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/#gatsby-plugin-react-helmet)
+
+Used to build site metadata.
+
+#### [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/#gatsby-plugin-styled-components)
+
+Allows for the use of `styled-components` in Gatsby.
+
+#### [gatsby-plugin-react-next](https://www.gatsbyjs.org/packages/gatsby-plugin-react-next/#gatsby-plugin-react-next)
+
+Allows for the use of React v16 and its features in Gatsby.
+
+#### [gatsby-plugin-sharp](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/#gatsby-plugin-sharp)
+
+Gatsby image processing library for responsive images. Works with [`gatsby-transformer-sharp`](https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/#gatsby-transformer-sharp).
+
+#### [gatsby-plugin-google-fonts](https://www.npmjs.com/package/gatsby-plugin-google-fonts)
+
+Inserts a `<link>` tag for Google fonts in `<head>`. There are other ways to use Google fonts with Gatsby, so this one may be removed if desired.
+
+#### [gatsby-plugin-catch-links](https://www.gatsbyjs.org/packages/gatsby-plugin-catch-links/#gatsby-plugin-catch-links)
+
+Intercepts local links from markdown and other non-react pages and does a client-side pushState to avoid the browser having to refresh the page.
+
+#### [gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/#gatsby-plugin-sitemap)
+
+Creates a sitemap for your Gatsby site.
+
+#### [gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/#gatsby-plugin-manifest)
+
+Adds support for shipping a `manifest.json` with your site.
+
+#### [gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/#gatsby-plugin-offline)
+
+Adds drop-in support for making a Gatsby site work offline and more resistant to bad network connections.
+
+### Source
+
+List of Gatsby `source` used and links to their documentation.
+
+#### [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#gatsby-source-filesystem)
+
+Plugin for creating File nodes from the file system. In this case, we are using it for our entire `src/docs/` directory and our `images/` directory, to make those files available for querying with GraphQL.
+
+### Transformers
+
+List of Gatsby `transformers` used and links to their documentation.
+
+#### [gatsby-transformer-sharp](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#gatsby-source-filesystem)
+
+Creates ImageSharp nodes from image types that are supported by the Sharp image processing library and provides fields in their GraphQL types for processing your images in a variety of ways including resizing, cropping, and creating responsive images. Works with [`gatsby-plugin-sharp`](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/#gatsby-plugin-sharp).
+
+#### [gatsby-transformer-json](https://www.gatsbyjs.org/packages/gatsby-transformer-json/#gatsby-transformer-json)
+
+Parses raw JSON strings into JavaScript objects e.g. from JSON files. Supports arrays of objects and single objects. This is used for parsing the `table_of_contents.json` file but with it enabled, any JSON file can be used in your project.
+
+#### [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/#gatsby-transformer-remark)
+
+Parses Markdown files using [Remark](https://remark.js.org/). Much of this project relies on this transformer, which also has its own list of plugins here:
+
+* ##### [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/#gatsby-remark-images)
+
+Processes images in markdown so they can be used in the production build.
+
+* ##### [gatsby-remark-responsive-iframe](https://www.gatsbyjs.org/packages/gatsby-remark-responsive-iframe/#gatsby-remark-responsive-iframe)
+
+Wraps iframes or objects (e.g. embedded YouTube videos) within markdown files in a responsive elastic container with a fixed aspect ratio.
+
+* ##### [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/#gatsby-remark-prismjs)
+
+Adds syntax highlighting to code blocks in markdown files using [PrismJS](http://prismjs.com/).
+
+* ##### [gatsby-remark-copy-linked-files](https://www.gatsbyjs.org/packages/gatsby-remark-copy-linked-files/#gatsby-remark-copy-linked-files)
+
+Copies local files linked to/from markdown to your public folder.
+
+* ##### [gatsby-remark-autolink-headers](https://www.gatsbyjs.org/packages/gatsby-remark-autolink-headers/#gatsby-remark-autolink-headers)
+
+Adds GitHub-style hover links to headers in your markdown files when they’re rendered.
+
 ## Credits and Contributing
 
 ### Credits
@@ -384,7 +516,6 @@ Thanks to the following projects for inspiration and direction:
   I was inspired to make a slimmed down version of this. Itself a fork of `gatsby-advanced-starter`, the <TableOfContents / > component system started here. Has many more heavy-duty features for a full Gatsby site. (blog, tags, categories, etc.)
 
 ### Contributing
-
 
 Any and all input for this project is welcome. Found a bug? Something not working? Have an idea?
 
