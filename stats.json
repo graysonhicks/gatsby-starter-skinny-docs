@@ -1,48 +1,52 @@
 {
   "assetsByChunkName": {
-    "path---contribute": [
-      "path---contribute-c7a44c1ee26559529774.js",
-      "path---contribute-c7a44c1ee26559529774.js.map"
+    "path---building": [
+      "path---building-2ffe30c5c4e79aacd66a.js",
+      "path---building-2ffe30c5c4e79aacd66a.js.map"
     ],
     "component---src-templates-doc-jsx": [
       "component---src-templates-doc-jsx-d8933fd1787d869c88bd.js",
       "component---src-templates-doc-jsx-d8933fd1787d869c88bd.js.map"
-    ],
-    "path---api": [
-      "path---api-12d4a9676ac7b921b4c7.js",
-      "path---api-12d4a9676ac7b921b4c7.js.map"
     ],
     "path---": [
       "path----7848b511a53482f7d7ef.js",
       "path----7848b511a53482f7d7ef.js.map"
     ],
     "path---basic-data-flow": [
-      "path---basic-data-flow-4a377968289b75d7d4b0.js",
-      "path---basic-data-flow-4a377968289b75d7d4b0.js.map"
+      "path---basic-data-flow-b4f7f39677a204d33ca2.js",
+      "path---basic-data-flow-b4f7f39677a204d33ca2.js.map"
     ],
     "component---src-layouts-index-jsx": [
       "component---src-layouts-index-jsx-bbef7534c5bec6dcff88.js",
       "component---src-layouts-index-jsx-bbef7534c5bec6dcff88.js.map"
     ],
     "path---install": [
-      "path---install-2d11ca5facbc86cbd558.js",
-      "path---install-2d11ca5facbc86cbd558.js.map"
+      "path---install-94a0a3ebd82f899f73b0.js",
+      "path---install-94a0a3ebd82f899f73b0.js.map"
     ],
     "path---plugins": [
-      "path---plugins-48efd54854f43aac3af0.js",
-      "path---plugins-48efd54854f43aac3af0.js.map"
+      "path---plugins-a38ddc015bb01d25762c.js",
+      "path---plugins-a38ddc015bb01d25762c.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
+    "path---deploying": [
+      "path---deploying-c773c61606729a777abe.js",
+      "path---deploying-c773c61606729a777abe.js.map"
+    ],
+    "path---contributing": [
+      "path---contributing-51b9e80a2aaf77c44cc1.js",
+      "path---contributing-51b9e80a2aaf77c44cc1.js.map"
+    ],
     "path---index": [
-      "path---index-469055d94c4e1b616264.js",
-      "path---index-469055d94c4e1b616264.js.map"
+      "path---index-554d90330de7ba834bfb.js",
+      "path---index-554d90330de7ba834bfb.js.map"
     ],
     "path---gatsby-node-js": [
-      "path---gatsby-node-js-e8575f65562e1ab02a8f.js",
-      "path---gatsby-node-js-e8575f65562e1ab02a8f.js.map"
+      "path---gatsby-node-js-9c01e8e1ef2042423193.js",
+      "path---gatsby-node-js-9c01e8e1ef2042423193.js.map"
     ],
     "commons": [
       "commons-109dec24e26f9289ba6f.js",
@@ -50,17 +54,21 @@
       "commons-109dec24e26f9289ba6f.js.map",
       "build-js-styles.css.map"
     ],
+    "path---credits": [
+      "path---credits-4355bb7bfba110356aa9.js",
+      "path---credits-4355bb7bfba110356aa9.js.map"
+    ],
     "path---source": [
-      "path---source-398d1a55ce19d32516d4.js",
-      "path---source-398d1a55ce19d32516d4.js.map"
+      "path---source-e222beedb7ba91ba389d.js",
+      "path---source-e222beedb7ba91ba389d.js.map"
+    ],
+    "path---development": [
+      "path---development-56930879cf05a1f5b6af.js",
+      "path---development-56930879cf05a1f5b6af.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
-    ],
-    "path---advanced-usage": [
-      "path---advanced-usage-048b35b137ff88edf58d.js",
-      "path---advanced-usage-048b35b137ff88edf58d.js.map"
     ],
     "component---src-pages-demo-jsx": [
       "component---src-pages-demo-jsx-1d07ee9b457b4a5e6bdf.js",
@@ -71,42 +79,42 @@
       "component---src-pages-index-jsx-3cc22a0efd985f81b194.js.map"
     ],
     "path---table-of-contents-json": [
-      "path---table-of-contents-json-5ab3dd4277b658c01e1e.js",
-      "path---table-of-contents-json-5ab3dd4277b658c01e1e.js.map"
+      "path---table-of-contents-json-3e77b8643a0571afb9c4.js",
+      "path---table-of-contents-json-3e77b8643a0571afb9c4.js.map"
     ],
     "path---demo": [
       "path---demo-5c590d0290936b0879f9.js",
       "path---demo-5c590d0290936b0879f9.js.map"
     ],
     "app": [
-      "app-0afc4b92482eef7eb606.js",
+      "app-d4dfdabaf0dbd6612dba.js",
       "build-js-styles.css",
-      "app-0afc4b92482eef7eb606.js.map",
+      "app-d4dfdabaf0dbd6612dba.js.map",
       "build-js-styles.css.map"
     ],
     "path---home-page": [
-      "path---home-page-59570859e9ded840cdcc.js",
-      "path---home-page-59570859e9ded840cdcc.js.map"
+      "path---home-page-6d9577488db0f127f538.js",
+      "path---home-page-6d9577488db0f127f538.js.map"
     ],
     "path---get-started": [
-      "path---get-started-8185d3116de857e240f7.js",
-      "path---get-started-8185d3116de857e240f7.js.map"
+      "path---get-started-068f0c67b0ff59d51d1e.js",
+      "path---get-started-068f0c67b0ff59d51d1e.js.map"
     ],
     "path---table-of-contents-component": [
-      "path---table-of-contents-component-420db0a5820bb30c326d.js",
-      "path---table-of-contents-component-420db0a5820bb30c326d.js.map"
+      "path---table-of-contents-component-e9f8bfaccefaa5e4e083.js",
+      "path---table-of-contents-component-e9f8bfaccefaa5e4e083.js.map"
     ],
     "path---basic-usage": [
-      "path---basic-usage-4833477fbad01e14d1ad.js",
-      "path---basic-usage-4833477fbad01e14d1ad.js.map"
+      "path---basic-usage-d73f5308155be5841054.js",
+      "path---basic-usage-d73f5308155be5841054.js.map"
     ],
     "path---demo-page": [
-      "path---demo-page-8c79dbd802132d8b86ad.js",
-      "path---demo-page-8c79dbd802132d8b86ad.js.map"
+      "path---demo-page-60602f6cfafe520052b5.js",
+      "path---demo-page-60602f6cfafe520052b5.js.map"
     ],
     "path---transformers": [
-      "path---transformers-71ac5ba18fbcab19b108.js",
-      "path---transformers-71ac5ba18fbcab19b108.js.map"
+      "path---transformers-3f43418f9393b173b33e.js",
+      "path---transformers-3f43418f9393b173b33e.js.map"
     ]
   }
 }
