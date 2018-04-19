@@ -13,6 +13,9 @@
             },
             {
               "post": "./install/get-started.md"
+            },
+            {
+              "post": "./install/customize.md"
             }
           ]
         },

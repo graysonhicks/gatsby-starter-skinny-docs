@@ -1,9 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled, { ThemeProvider } from 'styled-components';
-import globalStyles from './css/globalStyles';
-import './css/code.css';
-import theme from './theme';
+import globalStyles from '../styles/globalStyles';
+import '../styles/css/code.css';
+import theme from '../styles/theme';
 
 class MainLayout extends React.Component {
   getLocalTitle(pathPrefix) {
