@@ -104,43 +104,43 @@ This project comes with several options for deployment.
 
 Click on a step to be taken to further information on the part of the process where it occurs. The basic data flow for this starter can be illustrated like this:
 
-1.  [`table_of_contents.json`](/table-of-contents-json)
+1.  [`table_of_contents.json`](#table_of_contentsjson)
 
 You give structure and content for your docs and their navigation.
 
 &downarrow;
 
-2.  [`gatsby-source-filesystem`](/table-of-contents-json#entry-point-to-gatsby)
+2.  [`gatsby-source-filesystem`](#entry-point-to-gatsby)
 
 Gatsby pulls Markdown files in.
 
 &downarrow;
 
-3.  [`gatsby-transformer-remark`](/table-of-contents-json#transforming)
+3.  [`gatsby-transformer-remark`](#transforming)
 
 Remark transformer parses the Markdown files.
 
 &downarrow;
 
-4.  [`gatsby-node.js` (onCreateNode)](/gatsby-node-js#oncreatenode)
+4.  [`gatsby-node.js` (onCreateNode)](#oncreatenode)
 
 Nodes are available for manipulation in the `onCreateNode` hook. We add a new `slug` field.
 
 &downarrow;
 
-5.  [`gatsby-node.js` (createPages)](/gatsby-node-js#createPages)
+5.  [`gatsby-node.js` (createPages)](#createPages)
 
 Doc page nodes with new slug field are turned into pages with a template in the Gatsby `createPages` function.
 
 &downarrow;
 
-6.  [`GraphQl query in doc.jsx`](/table-of-contents-json#querying)
+6.  [`GraphQl query in doc.jsx`](#querying)
 
 We query the data with GraphQL in our `doc.jsx` page.
 
 &downarrow;
 
-7.  [`TableOfContents component`](/table-of-contents-component)
+7.  [`TableOfContents component`](#tableofcontents-component)
 
 The `<TableOfContents / >` component receives and renders the queried data.
 
@@ -148,7 +148,7 @@ The `<TableOfContents / >` component receives and renders the queried data.
 
 #### Intro
 
-The [`table_of_contents.json`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/docs/table_of_contents.json) file is where you provide the structure for your documentation, and content for its navigation. It relies on Gatsby's [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) to parse Markdown files. It is queried in the [`templates/doc.jsx`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/templates/doc.jsx) page and passed the data into the [`<TableOfContents / >`](/table-of-contents-component) component.
+The [`table_of_contents.json`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/docs/table_of_contents.json) file is where you provide the structure for your documentation, and content for its navigation. It relies on Gatsby's [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) to parse Markdown files. It is queried in the [`templates/doc.jsx`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/templates/doc.jsx) page and passed the data into the [`<TableOfContents / >`](#tableofcontents-component) component.
 
 #### Parts
 
