@@ -5,6 +5,7 @@ title: "table_of_contents.json"
 * [Intro](#intro)
 * [Parts](#parts)
 * [Entry Point to Gatsby](#entry)
+* [Transforming Markdown](#transforming)
 * [Querying](#querying)
 * [Example](#example)
 
@@ -12,7 +13,7 @@ title: "table_of_contents.json"
 
 ### Intro
 
-The [`table_of_contents.json`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/docs/table_of_contents.json) file is where you provide the structure for your documentation. It relies on Gatsby's [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) to parse Markdown files. It is queried in the [`templates/doc.jsx`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/templates/doc.jsx) page and passed the data into the [`<TableOfContents / >`](/table-of-contents-component) component.
+The [`table_of_contents.json`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/docs/table_of_contents.json) file is where you provide the structure for your documentation, and content for its navigation. It relies on Gatsby's [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) to parse Markdown files. It is queried in the [`templates/doc.jsx`](https://github.com/graysonhicks/gatsby-starter-skinny-docs/blob/master/src/templates/doc.jsx) page and passed the data into the [`<TableOfContents / >`](/table-of-contents-component) component.
 
 <a name="parts"/>
 
@@ -43,6 +44,12 @@ The `table_of_contents.json` is accessible to Gatsby through the [gatsby-source-
 ```
 
 If you want to move it, you must change the `path` above as well.
+
+<a name="transforming"/>
+
+### Transforming
+
+After this initial entry point by `gatsby-source-filesystem`, a transformer that is installed, called `gatsby-transformer-remark` parses any Markdown files the filesystem finds and transforms them into special objects with unique fields and properties not available just as a .md file. This is important in the `gatsby-node.js` file, as we add a slug field.
 
 <a name="querying"/>
 
@@ -76,7 +83,7 @@ tableOfContents: docsJson {
     }
 ```
 
-Note that you may add other fields to your Table of Contents items.
+Note that you may add other fields to your Table of Contents items. The `childMarkdownRemark` is created in the `gatsby-node.js` file.
 
 <a name="example"/>
 

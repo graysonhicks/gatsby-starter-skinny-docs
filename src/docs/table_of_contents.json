@@ -13,29 +13,44 @@
             },
             {
               "post": "./install/get-started.md"
-            },
-            {
-              "post": "./install/data-flow.md"
             }
           ]
         },
         {
-          "title": "Main Components",
+          "title": "Development",
           "sections": [
             {
-              "post": "./main_components/home-page.md"
+              "post": "./development/development.md"
             },
             {
-              "post": "./main_components/table-of-contents-json.md"
+              "post": "./development/building.md"
             },
             {
-              "post": "./main_components/gatsby-node.md"
+              "post": "./development/deploying.md"
+            }
+          ]
+        },
+        {
+          "title": "How It Works",
+          "sections": [
+            {
+              "post": "./how_it_works/data-flow.md"
+            },
+
+            {
+              "post": "./how_it_works/table-of-contents-json.md"
             },
             {
-              "post": "./main_components/table-of-contents.md"
+              "post": "./how_it_works/gatsby-node.md"
             },
             {
-              "post": "./main_components/demo-page.md"
+              "post": "./how_it_works/table-of-contents.md"
+            },
+            {
+              "post": "./how_it_works/home-page.md"
+            },
+            {
+              "post": "./how_it_works/demo-page.md"
             }
           ]
         },
@@ -50,6 +65,17 @@
             },
             {
               "post": "./plugins/transformers.md"
+            }
+          ]
+        },
+        {
+          "title": "Credits and Contributing",
+          "sections": [
+            {
+              "post": "./credits_and_contributing/credits.md"
+            },
+            {
+              "post": "./credits_and_contributing/contributing.md"
             }
           ]
         }
