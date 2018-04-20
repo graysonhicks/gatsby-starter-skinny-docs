@@ -20,4 +20,4 @@ Other files like `gatsby-node.js` and `gatsby-config.js` are certainly customiza
 
 ### Delete
 
-The Demo page uses a few `npm` packages that you won't need. Run `npm run fresh` to uninstall these and reset the `demo.jsx` page.
+There is a lot of content and a few npm packages from the `Demo` page that you won't need. Run `npm run fresh` to uninstall these and reset the `Demo.jsx` page. The `npm run fresh` command can then be deleted from the `package.json`. You will probably need to restart `gatsby develop` after this.

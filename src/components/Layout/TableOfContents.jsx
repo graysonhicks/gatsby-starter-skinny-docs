@@ -61,6 +61,8 @@ class TableOfContents extends React.Component {
   }
 }
 
+export default TableOfContents;
+
 const TableOfContentsContainer = styled.ul`
   padding: ${props => props.theme.sitePadding};
   list-style: none;
@@ -104,5 +106,3 @@ const SectionTitle = styled.h6`
   margin-bottom: 5px;
   color: black;
 `;
-
-export default TableOfContents;

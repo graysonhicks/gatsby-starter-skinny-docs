@@ -81,6 +81,14 @@
               "post": "./credits_and_contributing/contributing.md"
             }
           ]
+        },
+        {
+          "title": "Help",
+          "sections": [
+            {
+              "post": "./help/frequently_asked_questions.md"
+            }
+          ]
         }
       ]
     }
